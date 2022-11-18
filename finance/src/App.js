@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import MaterialTableComponent from './components/materialTable.tsx'
+import FinanceCard from './components/financeCard'
 import React from "react";
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
           Edit <code>src/App.js</code> and save to reload.
         </p>
       </header>
-      <MaterialTableComponent name="test"></MaterialTableComponent>
+      <FinanceCard></FinanceCard>
     </div>
   );
 }
