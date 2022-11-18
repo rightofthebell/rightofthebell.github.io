@@ -17,10 +17,27 @@ test_response =  [{
     "Category": 1,
     "Currency": "USD",
     "Notes": "A big mac"
+  },
+  {
+    "Transaction_Key": 3,
+    "Merchant": "Tesco",
+    "Value": 12.54,
+    "Date": "2022-01-01",
+    "Category": 1,
+    "Currency": "USD",
+    "Notes": ""
   }
 ]
 
 def lambda_handler(event, context):
     # TODO implement
-    return test_response
+    return {
+        "statusCode": 200,
+        "headers": {
+            "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "*",  
+            "Access-Control-Allow-Methods": "GET" 
+        },
+        "body": test_response
+    }
     
